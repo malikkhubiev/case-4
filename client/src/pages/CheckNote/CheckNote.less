@@ -1,0 +1,125 @@
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box{
+    width: 50%;
+    max-width: 770px;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    position: relative;
+}
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_text{
+        color: #fff;
+        font-size: 20px;
+        &_square{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+            background-color: #000;
+            border: 1px solid #000;
+            transition: 0.5s;
+        }
+        &_square:hover{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+    &_text:nth-child(2){
+        color: #000;
+    }
+}
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.color{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50px;
+    height: 50px;
+    padding: 0 3px; 
+    background-color: #fff;
+    border: 0;
+}
+.field{
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    font-size: 25px;
+    outline: none;
+    padding-left: 30px;
+    border-left: 3px solid #000;
+    color: #000;
+}
+.fieldContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.counter{
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #000;
+    opacity: 0.5;   
+}
+.body{
+    padding-right: 15px;
+    height: 35vh;
+    max-height: 475px;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+@media(max-width: 1200px) {
+    .box{
+        width: 60%;
+    }
+}
+@media(max-width: 992px) {
+    .box{
+        width: 80%;
+    }
+}
+@media(max-width: 768px) {
+    .box{
+        width: 90%;
+    }
+}
+@media(max-width: 768px) {
+    .field{
+        padding-left: 15px;
+    }
+}

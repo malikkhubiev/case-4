@@ -1,0 +1,87 @@
+.note{
+    width: 500px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.line{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.date{
+    font-size: 25px;
+}
+.date::after, .date::before{
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 15px;
+    background-color: #fff;
+    margin: 0 10px;
+}
+.action{
+    width: 145px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 40px;
+    text-align: left;
+    &:nth-child(1){
+        text-align: right;
+    }
+}
+.action:hover{
+    background-color: #fff;
+    color: #000;
+}
+.main{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.header{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+}
+.body{
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 15px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+@media (max-width: 575px) {
+    .note{
+        width: 350px;
+        margin-top: 30px;
+    }
+    .action{
+        width: 90px;
+        font-size: 25px;
+    }
+    .header{
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    .body{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-top: 0;
+    }
+}
